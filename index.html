@@ -1,75 +1,46 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Aquarium1989 — Minimalis</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aquarium1989</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="nav">
-    <div class="brand">
-      <span class="logo">🐟</span>
-      <span class="name">Aquarium1989</span>
-    </div>
-    <nav class="nav-links">
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">🐠 Aquarium1989</div>
+    <nav class="nav">
+      <a href="#home">Home</a>
       <a href="#produk">Produk</a>
       <a href="#tentang">Tentang</a>
-      <button id="cartBtn" class="btn ghost">🛒 <span id="cartCount">0</span></button>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-  <img src="images/hero.jpg" alt="Aquarium Hero" class="hero-img">
-  <div class="hero-text">
-    <h1>Selamat Datang di <span>Aquarium1989</span></h1>
-    <p>Temukan aquarium cantik dan minimalis untuk ruangmu.</p>
-    <a href="#produk" class="btn">Lihat Produk</a>
-  </div>
-</section>
-
-
-    <section id="produk" class="section products">
-      <h2 class="section-title">Produk Pilihan</h2>
-      <div id="productGrid" class="grid"></div>
-    </section>
-
-    <section id="tentang" class="section about">
-      <h3>Tentang Aquarium1989</h3>
-      <p>Aquarium1989 menyajikan aquarium mini berkualitas, cocok untuk dekorasi rumah atau hadiah. Didukung garansi kecil & tips perawatan.</p>
-    </section>
-  </main>
-
-  <!-- Modal detail -->
-  <div id="modal" class="modal" aria-hidden="true">
-    <div class="modal-panel" role="dialog" aria-modal="true">
-      <button class="modal-close" id="modalClose">×</button>
-      <img id="modalImg" alt="" />
-      <h3 id="modalName"></h3>
-      <p id="modalPrice" class="price"></p>
-      <p id="modalDesc" class="desc"></p>
-      <div class="modal-actions">
-        <button id="addToCart" class="btn primary">Tambah ke Keranjang</button>
-      </div>
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h1>Temukan Keindahan <span>Aquarium Modern</span></h1>
+      <p>Koleksi aquarium terbaik untuk menghiasi ruanganmu.</p>
+      <a href="#produk" class="btn">Lihat Produk</a>
     </div>
-  </div>
-
-  <!-- Keranjang sederhana (slide) -->
-  <aside id="cart" class="cart" aria-hidden="true">
-    <div class="cart-header">
-      <h4>Keranjang</h4>
-      <button id="closeCart" class="btn ghost">Tutup</button>
+    <div class="hero-img">
+      <img src="images/hero.jpg" alt="Aquarium Hero">
     </div>
-    <ul id="cartItems" class="cart-list"></ul>
-    <div class="cart-footer">
-      <div class="total">Total: Rp <span id="cartTotal">0</span></div>
-      <button id="checkout" class="btn primary">Checkout</button>
-    </div>
-  </aside>
+  </section>
 
+  <!-- PRODUK SECTION -->
+  <section id="produk" class="produk">
+    <h2>Produk Kami</h2>
+    <div class="produk-grid" id="produkList">
+      <!-- Produk akan muncul lewat script.js -->
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="footer">
-    <small>© 2025 Aquarium1989 — Minimalis Elegan</small>
+    <p>© 2025 Aquarium1989. Semua Hak Dilindungi.</p>
   </footer>
 
   <script src="script.js"></script>
