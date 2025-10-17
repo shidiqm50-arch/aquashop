@@ -3,58 +3,59 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AquaShop - Toko Aquarium Modern</title>
+  <title>AquaShop - Toko Aquarium Elegan</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>🌊 AquaShop</h1>
+  <header class="navbar">
+    <div class="logo">🌊 <span>AquaShop</span></div>
     <nav>
       <a href="#">Beranda</a>
       <a href="#">Produk</a>
       <a href="#">Tentang</a>
       <a href="#">Kontak</a>
-      <a href="#" id="cart-btn">🛒 Keranjang (<span id="cart-count">0</span>)</a>
+      <button id="cart-btn">🛒 Keranjang (<span id="cart-count">0</span>)</button>
     </nav>
   </header>
 
   <section class="hero">
-    <h2>Selamat Datang di AquaShop</h2>
-    <p>Toko online terbaik untuk pecinta ikan dan aquarium!</p>
-  </section>
-
-  <section class="products">
-    <h2>🪸 Produk Unggulan</h2>
-    <div class="product-grid" id="product-list">
-      <!-- Produk akan dimasukkan oleh JavaScript -->
+    <div class="hero-text">
+      <h1>Temukan Keindahan Dunia Bawah Air</h1>
+      <p>AquaShop menghadirkan koleksi aquarium, ikan, dan perlengkapan terbaik untuk para pecinta laut.</p>
+      <a href="#produk" class="btn-primary">Lihat Produk</a>
     </div>
   </section>
+
+  <section id="produk" class="products">
+    <h2>Produk Pilihan Kami</h2>
+    <div class="product-grid" id="product-list"></div>
+  </section>
+
+  <!-- Modal Detail Produk -->
+  <div class="product-modal" id="product-modal">
+    <div class="product-content">
+      <img id="modal-img" src="" alt="">
+      <h3 id="modal-name"></h3>
+      <p id="modal-price"></p>
+      <p id="modal-desc"></p>
+      <button id="modal-add" class="btn-primary">Tambah ke Keranjang</button>
+      <button id="modal-close" class="btn-secondary">Tutup</button>
+    </div>
+  </div>
 
   <!-- Modal Keranjang -->
   <div class="cart-modal" id="cart-modal">
     <div class="cart-content">
-      <h2>🛒 Keranjang Belanja</h2>
+      <h2>Keranjang Belanja</h2>
       <ul id="cart-items"></ul>
       <p><strong>Total:</strong> Rp<span id="cart-total">0</span></p>
-      <button id="checkout-btn">Checkout</button>
-      <button id="close-cart">Tutup</button>
-    </div>
-  </div>
-
-  <!-- 🆕 Modal Detail Produk -->
-  <div class="product-modal" id="product-modal">
-    <div class="product-content">
-      <img id="modal-img" src="" alt="produk">
-      <h3 id="modal-name"></h3>
-      <p id="modal-price"></p>
-      <p id="modal-desc"></p>
-      <button id="modal-add">Tambah ke Keranjang</button>
-      <button id="modal-close">Tutup</button>
+      <button id="checkout-btn" class="btn-primary">Checkout</button>
+      <button id="close-cart" class="btn-secondary">Tutup</button>
     </div>
   </div>
 
   <footer>
-    <p>© 2025 AquaShop. Semua Hak Dilindungi.</p>
+    <p>© 2025 AquaShop | Dirancang dengan cinta untuk pecinta aquarium 🐠</p>
   </footer>
 
   <script src="script.js"></script>
