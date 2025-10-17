@@ -14,43 +14,23 @@
       <a href="#">Produk</a>
       <a href="#">Tentang</a>
       <a href="#">Kontak</a>
+      <a href="#" id="cart-btn">🛒 Keranjang (<span id="cart-count">0</span>)</a>
     </nav>
   </header>
 
   <section class="hero">
     <h2>Selamat Datang di AquaShop</h2>
     <p>Toko online terbaik untuk pecinta ikan dan aquarium!</p>
-    <button onclick="alert('Fitur belum aktif 😄')">Belanja Sekarang</button>
   </section>
 
   <section class="products">
     <h2>🪸 Produk Unggulan</h2>
-    <div class="product-grid">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1599447421416-457c43ec3dfe" alt="Ikan Cupang" />
-        <h3>Ikan Cupang Hias</h3>
-        <p>Mulai dari Rp25.000</p>
-        <button>Beli Sekarang</button>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1526566762798-8fac9c07aa98" alt="Aquarium Mini" />
-        <h3>Aquarium Mini LED</h3>
-        <p>Mulai dari Rp120.000</p>
-        <button>Beli Sekarang</button>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1614245486564-bc3a6a142bdf" alt="Filter Air" />
-        <h3>Filter Air Ultra</h3>
-        <p>Mulai dari Rp75.000</p>
-        <button>Beli Sekarang</button>
-      </div>
+    <div class="product-grid" id="product-list">
+      <!-- Produk akan muncul dari JavaScript -->
     </div>
   </section>
 
-  <footer>
-    <p>© 2025 AquaShop. Semua Hak Dilindungi.</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+  <!-- Modal Keranjang -->
+  <div class="cart-modal" id="cart-modal">
+    <div class="cart-content">
+      <h2>🛒 Keranjang Belanja</h2
