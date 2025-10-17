@@ -1,5 +1,1 @@
-document.querySelectorAll("button").forEach(btn => {
-  btn.addEventListener("click", () => {
-    alert("Terima kasih! Fitur pembelian sedang dikembangkan 🛒");
-  });
-});
+console.log("AquaShop siap digunakan!");
