@@ -1,61 +1,76 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AquaShop - Toko Aquarium Elegan</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aquarium1989 — Minimalis</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo">🌊 <span>AquaShop</span></div>
-    <nav>
-      <a href="#">Beranda</a>
-      <a href="#">Produk</a>
-      <a href="#">Tentang</a>
-      <a href="#">Kontak</a>
-      <button id="cart-btn">🛒 Keranjang (<span id="cart-count">0</span>)</button>
+  <header class="nav">
+    <div class="brand">
+      <span class="logo">🐟</span>
+      <span class="name">Aquarium1989</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#produk">Produk</a>
+      <a href="#tentang">Tentang</a>
+      <button id="cartBtn" class="btn ghost">🛒 <span id="cartCount">0</span></button>
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Temukan Keindahan Dunia Bawah Air</h1>
-      <p>AquaShop menghadirkan koleksi aquarium, ikan, dan perlengkapan terbaik untuk para pecinta laut.</p>
-      <a href="#produk" class="btn-primary">Lihat Produk</a>
-    </div>
-  </section>
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <h1>Kesederhanaan & Keindahan<br><span>Aquarium Terpilih</span></h1>
+        <p class="lead">Produk terkurasi — desain rapi, perawatan mudah.</p>
+        <a href="#produk" class="btn primary">Lihat Produk</a>
+      </div>
+      <figure class="hero-img">
+        <img src="images/hero.jpg" alt="Aquarium1989 hero image">
+      </figure>
+    </section>
 
-  <section id="produk" class="products">
-    <h2>Produk Pilihan Kami</h2>
-    <div class="product-grid" id="product-list"></div>
-  </section>
+    <section id="produk" class="section products">
+      <h2 class="section-title">Produk Pilihan</h2>
+      <div id="productGrid" class="grid"></div>
+    </section>
 
-  <!-- Modal Detail Produk -->
-  <div class="product-modal" id="product-modal">
-    <div class="product-content">
-      <img id="modal-img" src="" alt="">
-      <h3 id="modal-name"></h3>
-      <p id="modal-price"></p>
-      <p id="modal-desc"></p>
-      <button id="modal-add" class="btn-primary">Tambah ke Keranjang</button>
-      <button id="modal-close" class="btn-secondary">Tutup</button>
+    <section id="tentang" class="section about">
+      <h3>Tentang Aquarium1989</h3>
+      <p>Aquarium1989 menyajikan aquarium mini berkualitas, cocok untuk dekorasi rumah atau hadiah. Didukung garansi kecil & tips perawatan.</p>
+    </section>
+  </main>
+
+  <!-- Modal detail -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-panel" role="dialog" aria-modal="true">
+      <button class="modal-close" id="modalClose">×</button>
+      <img id="modalImg" alt="" />
+      <h3 id="modalName"></h3>
+      <p id="modalPrice" class="price"></p>
+      <p id="modalDesc" class="desc"></p>
+      <div class="modal-actions">
+        <button id="addToCart" class="btn primary">Tambah ke Keranjang</button>
+      </div>
     </div>
   </div>
 
-  <!-- Modal Keranjang -->
-  <div class="cart-modal" id="cart-modal">
-    <div class="cart-content">
-      <h2>Keranjang Belanja</h2>
-      <ul id="cart-items"></ul>
-      <p><strong>Total:</strong> Rp<span id="cart-total">0</span></p>
-      <button id="checkout-btn" class="btn-primary">Checkout</button>
-      <button id="close-cart" class="btn-secondary">Tutup</button>
+  <!-- Keranjang sederhana (slide) -->
+  <aside id="cart" class="cart" aria-hidden="true">
+    <div class="cart-header">
+      <h4>Keranjang</h4>
+      <button id="closeCart" class="btn ghost">Tutup</button>
     </div>
-  </div>
+    <ul id="cartItems" class="cart-list"></ul>
+    <div class="cart-footer">
+      <div class="total">Total: Rp <span id="cartTotal">0</span></div>
+      <button id="checkout" class="btn primary">Checkout</button>
+    </div>
+  </aside>
 
-  <footer>
-    <p>© 2025 AquaShop | Dirancang dengan cinta untuk pecinta aquarium 🐠</p>
+  <footer class="footer">
+    <small>© 2025 Aquarium1989 — Minimalis Elegan</small>
   </footer>
 
   <script src="script.js"></script>
