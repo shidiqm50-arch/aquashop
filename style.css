@@ -1,109 +1,35 @@
-:root{
-  --bg: #fbfcfd;
-  --muted: #6b7280;
-  --primary: #0b7fa7;
-  --white: #ffffff;
-  --card: #fff;
-  --shadow: 0 6px 20px rgba(11,127,167,0.08);
-  --radius: 12px;
-  --max: 1100px;
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 20px;
+  background-color: #f8fafc;
+  border-radius: 12px;
 }
 
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background:var(--bg);
-  color:#111827;
-  -webkit-font-smoothing:antialiased;
-  line-height:1.5;
+.hero-img {
+  width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-/* NAV */
-.nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:18px 24px;
-  max-width:var(--max);
-  margin:0 auto;
-}
-.brand{display:flex;align-items:center;gap:10px}
-.logo{font-size:20px}
-.name{font-weight:700;letter-spacing:0.2px}
-.nav-links{display:flex;gap:14px;align-items:center}
-.nav a{color:var(--muted);text-decoration:none;font-weight:500}
-.btn{border:0;padding:8px 12px;border-radius:8px;cursor:pointer;font-weight:600}
-.btn.primary{background:var(--primary);color:var(--white)}
-.btn.ghost{background:transparent;color:var(--muted)}
-
-/* HERO */
-.hero{
-  display:grid;
-  grid-template-columns: 1fr 420px;
-  gap:40px;
-  align-items:center;
-  max-width:var(--max);
-  margin:28px auto;
-  padding:20px;
-}
-.hero-inner h1{
-  font-size:34px;margin:0 0 10px;color:#0f172a;font-weight:700;
-}
-.hero-inner h1 span{color:var(--primary)}
-.lead{color:var(--muted);margin-bottom:16px}
-.hero-img img{
-  width:100%;
-  border-radius:var(--radius);
-  box-shadow:var(--shadow);
-  display:block;
-  object-fit:cover;
-  height:320px;
+.hero-text h1 {
+  font-size: 36px;
+  color: #0b7fa7;
+  margin-bottom: 10px;
 }
 
-/* PRODUCTS */
-.section{max-width:var(--max);margin:32px auto;padding:0 20px}
-.section-title{font-size:20px;margin:0 0 18px}
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:18px;
+.hero-text span {
+  color: #065f46;
 }
-.card{
-  background:var(--card);
-  border-radius:12px;
-  overflow:hidden;
-  box-shadow:var(--shadow);
-  transition:transform .18s ease, box-shadow .18s ease;
-  cursor:pointer;
-  display:flex;
-  flex-direction:column;
-}
-.card:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(11,127,167,0.12)}
-.card-media img{width:100%;height:170px;object-fit:cover;display:block}
-.card-body{padding:14px;flex:1;display:flex;flex-direction:column}
-.card-title{font-size:16px;margin:0 0 6px}
-.card-price{margin-top:auto;color:var(--primary);font-weight:700}
 
-/* modal */
-.modal{display:none;position:fixed;inset:0;background:rgba(2,6,23,0.5);align-items:center;justify-content:center;padding:24px;z-index:60}
-.modal-panel{background:var(--white);border-radius:12px;padding:18px;max-width:520px;width:100%;box-shadow:var(--shadow);position:relative;text-align:center}
-.modal-panel img{width:100%;height:280px;object-fit:cover;border-radius:8px;margin-bottom:12px}
-.modal-close{position:absolute;right:12px;top:12px;background:transparent;border:0;font-size:22px;cursor:pointer}
-
-/* cart slide */
-.cart{position:fixed;right:18px;top:80px;width:320px;background:var(--white);border-radius:12px;box-shadow:var(--shadow);padding:12px;display:flex;flex-direction:column;gap:10px;z-index:70;transform:translateX(420px);transition:transform .22s ease}
-.cart.open{transform:translateX(0)}
-.cart-list{list-style:none;padding:0;margin:0;max-height:260px;overflow:auto}
-.cart-list li{padding:8px 0;border-bottom:1px solid #f1f5f9}
-.cart-footer{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
-
-/* footer */
-.footer{max-width:var(--max);margin:40px auto;padding:16px 20px;text-align:center;color:var(--muted)}
-
-/* responsive */
-@media (max-width:880px){
-  .hero{grid-template-columns:1fr;gap:20px}
-  .hero-img img{height:220px}
-  .cart{right:12px;top:70px}
+.btn {
+  background-color: #0b7fa7;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
 }
