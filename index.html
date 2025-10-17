@@ -26,11 +26,37 @@
   <section class="products">
     <h2>🪸 Produk Unggulan</h2>
     <div class="product-grid" id="product-list">
-      <!-- Produk akan muncul dari JavaScript -->
+      <!-- Produk akan dimasukkan oleh JavaScript -->
     </div>
   </section>
 
   <!-- Modal Keranjang -->
   <div class="cart-modal" id="cart-modal">
     <div class="cart-content">
-      <h2>🛒 Keranjang Belanja</h2
+      <h2>🛒 Keranjang Belanja</h2>
+      <ul id="cart-items"></ul>
+      <p><strong>Total:</strong> Rp<span id="cart-total">0</span></p>
+      <button id="checkout-btn">Checkout</button>
+      <button id="close-cart">Tutup</button>
+    </div>
+  </div>
+
+  <!-- 🆕 Modal Detail Produk -->
+  <div class="product-modal" id="product-modal">
+    <div class="product-content">
+      <img id="modal-img" src="" alt="produk">
+      <h3 id="modal-name"></h3>
+      <p id="modal-price"></p>
+      <p id="modal-desc"></p>
+      <button id="modal-add">Tambah ke Keranjang</button>
+      <button id="modal-close">Tutup</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 AquaShop. Semua Hak Dilindungi.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
